@@ -4,6 +4,7 @@ const cors = require('cors');
 const router = require('./routes');
 const errorHandler = require('./utils/errorHandler');
 require('dotenv').config();
+require('./models')
 
 // Esta es nuestra aplicación
 const app = express();
@@ -17,7 +18,7 @@ app.use(cors());
 
 app.use(router);
 app.get('/', (req, res) => {
-    return res.send("Welcome to express!");
+    return res.send("Welcome to express yeiner!");
 })
 
 // middlewares después de las rutas
